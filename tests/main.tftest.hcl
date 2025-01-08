@@ -16,12 +16,12 @@ run "custom_name_required_variable_test" {
   }
 
   assert {
-   condition     = length(module.custom_name_rg.name) > 0
+   condition     = length(azurerm_resource_group.this.name) > 0
    error_message = "Test failed: the attribute value was not as expected."
   }
 
   assert {
-   condition     = length(module.custom_name_rg.location) > 0
+   condition     = length(azurerm_resource_group.this.location) > 0
    error_message = "Test failed: the attribute value was not as expected."
   }
  
